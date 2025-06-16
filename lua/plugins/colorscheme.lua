@@ -10,23 +10,9 @@ return {
   },
   {
     "catppuccin/nvim",
+    lazy = true,
     name = "catppuccin",
-    lazy = false, -- load immediately so overrides are applied
-    priority = 1000, -- ensure it loads before other plugins
     opts = {
-      flavour = "mocha", -- set mocha flavour
-      background = { -- maintain dark background mapping
-        light = "latte",
-        dark = "mocha",
-      },
-      -- apply our pure-black overrides here
-      color_overrides = {
-        mocha = {
-          base = "#000000",
-          mantle = "#000000",
-          crust = "#000000",
-        },
-      },
       integrations = {
         aerial = true,
         alpha = true,
@@ -34,6 +20,7 @@ return {
         dashboard = true,
         flash = true,
         fzf = true,
+        grug_far = true,
         gitsigns = true,
         headlines = true,
         illuminate = true,
@@ -65,14 +52,16 @@ return {
         which_key = true,
       },
     },
-    -- bufferline integration remains unchanged
-    dependencies = { "akinsho/bufferline.nvim" },
-    config = function(_, opts)
-      require("catppuccin").setup(opts)
-      vim.cmd([[colorscheme catppuccin]])
-      -- ensure any leftover highlights are true black
-      vim.cmd([[highlight Normal guibg=#000000]])
-      vim.cmd([[highlight NonText guibg=#000000]])
-    end,
+    specs = {
+      {
+        "akinsho/bufferline.nvim",
+        optional = true,
+        opts = function(_, opts)
+          if (vim.g.colors_name or ""):find("catppuccin") then
+            opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
+          end
+        end,
+      },
+    },
   },
 }
