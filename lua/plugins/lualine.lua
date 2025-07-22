@@ -22,13 +22,23 @@ return {
 
     local opts = {
       options = {
-        theme = "auto",
+        theme = "catppuccin",
+        component_separators = "",
+        section_separators = "",
         globalstatus = vim.o.laststatus == 3,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
       },
       sections = {
-        lualine_a = { "mode" },
-        lualine_b = { "branch" },
+        lualine_a = {
+          {
+            "mode",
+            icon = "", -- Nerd Font Vim logo
+            separator = " ", -- Optional: cleaner look
+          },
+        },
+        lualine_b = {
+          -- "branch"
+        },
 
         lualine_c = {
           LazyVim.lualine.root_dir(),

@@ -13,6 +13,15 @@ return {
     lazy = true,
     name = "catppuccin",
     opts = {
+      transparent_background = true, -- ✨
+      -- color_overrides = {
+      --   mocha = {
+      --     base = "#000000",
+      --     mantle = "#000000",
+      --     crust = "#000000",
+      --   },
+      -- },
+
       integrations = {
         aerial = true,
         alpha = true,
