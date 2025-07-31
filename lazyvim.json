@@ -1,6 +1,6 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.supermaven",
+    "lazyvim.plugins.extras.ai.copilot",
     "lazyvim.plugins.extras.lang.clangd",
     "lazyvim.plugins.extras.lang.cmake",
     "lazyvim.plugins.extras.lang.docker",
@@ -21,4 +21,3 @@
   },
   "version": 8
 }
-

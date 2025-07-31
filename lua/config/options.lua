@@ -3,6 +3,3 @@
 -- Add any additional options here
 vim.g.ai_cmp = false
 vim.opt.cursorline = false
-
--- Set a vertical line at column 80
-vim.opt.colorcolumn = "80"

@@ -1,18 +1,19 @@
-return {
-  "supermaven-inc/supermaven-nvim",
-  event = "InsertEnter",
-  cmd = {
-    "SupermavenUsePro",
-  },
-  opts = {
-    keymaps = {
-      accept_suggestion = nil, -- handled by nvim-cmp or blink
-    },
-    disable_inline_completion = vim.g.ai_cmp,
-    auto_trigger = true, -- auto-suggest as you type/pause
-    ignore_filetypes = { "bigfile", "snacks_input", "snacks_notif" },
-  },
-}
+return {}
+-- return {
+--   "supermaven-inc/supermaven-nvim",
+--   event = "InsertEnter",
+--   cmd = {
+--     "SupermavenUsePro",
+--   },
+--   opts = {
+--     keymaps = {
+--       accept_suggestion = nil, -- handled by nvim-cmp or blink
+--     },
+--     disable_inline_completion = vim.g.ai_cmp,
+--     auto_trigger = true, -- auto-suggest as you type/pause
+--     ignore_filetypes = { "bigfile", "snacks_input", "snacks_notif" },
+--   },
+-- }
 --     Full Spec
 --
 -- {
