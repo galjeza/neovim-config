@@ -1,28 +1,29 @@
-return {
-  {
-    "akinsho/bufferline.nvim",
-    opts = {
-      options = {
-        mode = "buffers", -- show buffers (not tabs)
-        numbers = "none",
-        indicator = { style = "none" },
-        show_buffer_icons = false,
-        show_buffer_close_icons = false,
-        show_close_icon = false,
-        diagnostics = false,
-        separator_style = "none", -- clean separators
-        always_show_bufferline = false,
-        offsets = {
-          { filetype = "neo-tree", text = "", padding = 0 },
-        },
-      },
-      highlights = {
-        fill = { bg = "NONE" },
-        background = { bg = "NONE" },
-        buffer_selected = { bold = true },
-        separator = { fg = "#2a2a37", bg = "NONE" },
-        separator_selected = { fg = "#2a2a37", bg = "NONE" },
-      },
-    },
-  },
-}
+return {}
+-- return {
+--   {
+--     "akinsho/bufferline.nvim",
+--     opts = {
+--       options = {
+--         mode = "buffers", -- show buffers (not tabs)
+--         numbers = "none",
+--         indicator = { style = "none" },
+--         show_buffer_icons = false,
+--         show_buffer_close_icons = false,
+--         show_close_icon = false,
+--         diagnostics = false,
+--         separator_style = "none", -- clean separators
+--         always_show_bufferline = false,
+--         offsets = {
+--           { filetype = "neo-tree", text = "", padding = 0 },
+--         },
+--       },
+--       highlights = {
+--         fill = { bg = "NONE" },
+--         background = { bg = "NONE" },
+--         buffer_selected = { bold = true },
+--         separator = { fg = "#2a2a37", bg = "NONE" },
+--         separator_selected = { fg = "#2a2a37", bg = "NONE" },
+--       },
+--     },
+--   },
+-- }
