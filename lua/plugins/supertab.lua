@@ -10,37 +10,6 @@ return {
 
     local cmp = require("cmp")
 
-    opts.window = {
-      completion = {
-        border = {
-          { "󱐋", "WarningMsg" },
-          { "─", "Comment" },
-          { "╮", "Comment" },
-          { "│", "Comment" },
-          { "╯", "Comment" },
-          { "─", "Comment" },
-          { "╰", "Comment" },
-          { "│", "Comment" },
-        },
-        scrollbar = false,
-        winblend = 0,
-      },
-      documentation = {
-        border = {
-          { "󰙎", "DiagnosticHint" },
-          { "─", "Comment" },
-          { "╮", "Comment" },
-          { "│", "Comment" },
-          { "╯", "Comment" },
-          { "─", "Comment" },
-          { "╰", "Comment" },
-          { "│", "Comment" },
-        },
-        scrollbar = false,
-        winblend = 0,
-      },
-    }
-
     opts.mapping = vim.tbl_extend("force", opts.mapping, {
       ["<Tab>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
