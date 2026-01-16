@@ -1,78 +1,30 @@
 return {
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = function()
-        require("catppuccin").load()
-      end,
-    },
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1001,
-    opts = {
-      no_italic = true,
-      term_colors = true,
-      transparent_background = true,
-      styles = {
-        comments = {},
-        conditionals = {},
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-      },
-      color_overrides = {
-        mocha = {
-          base = "#000000",
-          mantle = "#000000",
-          crust = "#000000",
-        },
-      },
-      integrations = {
-        telescope = {
-          enabled = true,
-          style = "nvchad",
-        },
-        dropbar = {
-          enabled = true,
-          color_mode = true,
-        },
-      },
-    },
-
-    config = function(_, opts)
-      require("catppuccin").setup(opts)
-      vim.cmd.colorscheme("catppuccin-mocha")
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = function(_, opts)
+      opts.transparent = true
+      opts.italic_comments = true
     end,
   },
   {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      transparent = false,
-      dimInactive = false,
-      theme = "dragon",
-      background = { dark = "dragon", light = "lotus" },
-    },
-    -- config = function(_, opts)
-    --   require("kanagawa").setup(opts)
-    --   vim.cmd.colorscheme("kanagawa-wave")
-    -- end,
-  },
-
-  -- tell LazyVim to use this colorscheme
-  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = "cyberdream",
     },
+  },
+
+  -- modicator (auto color line number based on vim mode)
+  {
+    "mawkler/modicator.nvim",
+    dependencies = "scottmckendry/cyberdream.nvim",
+    init = function()
+      -- These are required for Modicator to work
+      vim.o.cursorline = false
+      vim.o.number = true
+      vim.o.termguicolors = true
+    end,
+    opts = {},
   },
 }
