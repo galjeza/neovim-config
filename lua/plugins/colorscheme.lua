@@ -14,7 +14,7 @@ return {
     opts = {
       no_italic = true,
       term_colors = true,
-      transparent_background = false,
+      transparent_background = true,
       styles = {
         comments = {},
         conditionals = {},
@@ -72,7 +72,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanagawa-dragon",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }
